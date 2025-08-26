@@ -1,0 +1,43 @@
+openapi: 3.0.3
+info:
+  title: Magnum FIPE - API-1
+  version: "1.0.0"
+paths:
+  /v1/vehicles/load:
+    post:
+      summary: Trigger load (mock)
+      responses:
+        '202':
+          description: Accepted
+  /v1/vehicles/brands:
+    get:
+      summary: List brands
+      responses:
+        '200':
+          description: OK
+  /v1/vehicles/brand/{brandId}/models:
+    get:
+      summary: List models by brand
+      parameters:
+        - name: brandId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+  /v1/vehicles/{vehicleId}:
+    put:
+      summary: Update vehicle
+      responses:
+        '200':
+          description: OK
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+security:
+  - bearerAuth: []

@@ -1,0 +1,11 @@
+CREATE TABLE IF NOT EXISTS brands (
+  id SERIAL PRIMARY KEY,
+  name VARCHAR(255) NOT NULL
+);
+CREATE TABLE IF NOT EXISTS vehicles (
+  id SERIAL PRIMARY KEY,
+  brand_id INT,
+  code VARCHAR(100),
+  model VARCHAR(255),
+  observations TEXT
+);
