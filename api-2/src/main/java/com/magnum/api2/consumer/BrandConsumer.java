@@ -9,7 +9,6 @@ import java.util.Map;
 public class BrandConsumer {
 
     public void consume(String brandJson) {
-        // mock FIPE
         List<Map<String,String>> models = MockFipeClient.getModelsByBrand("1");
         System.out.println("Persistindo modelos mock: " + models);
     }

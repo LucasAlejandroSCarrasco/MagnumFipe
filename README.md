@@ -18,14 +18,4 @@ Este pacote contém a implementação completa do teste, usando MOCK no lugar da
 - `GET /v1/vehicles/brand/{brandId}/models` → lista modelos/códigos por marca
 - `PUT /v1/vehicles/{vehicleId}` → atualiza modelo/observações
 
-### Como rodar
-```bash
-docker-compose build
-docker-compose up
-```
-- API-1: http://localhost:8081
-- API-2: http://localhost:8082
-- RabbitMQ: http://localhost:15672 (guest/guest)
-- Postgres: localhost:5432 (mag/magpass)
-- Redis: localhost:6379
 

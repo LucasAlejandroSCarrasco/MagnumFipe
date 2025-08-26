@@ -14,7 +14,6 @@ public class VehiclesController {
     @POST
     @Path("/load")
     public Response triggerLoad() {
-        // mock publish to RabbitMQ
         return Response.accepted().entity("{\"status\":\"mock published brands\"}").build();
     }
 
